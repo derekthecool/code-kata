@@ -7,6 +7,12 @@ public class StringCalculator_Tests
 {
     [Theory]
     [InlineData("", 0)]
+    [InlineData("1", 1)]
+    [InlineData("2", 2)]
+    [InlineData("3", 3)]
+    [InlineData("4", 4)]
+    [InlineData("5", 5)]
+    [InlineData("6", 6)]
     public void NullString(string inputString, int expectedSum)
     {
         // Act
