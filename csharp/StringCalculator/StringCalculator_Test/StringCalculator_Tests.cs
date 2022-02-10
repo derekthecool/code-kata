@@ -5,16 +5,17 @@ namespace StringCalculator_Test;
 
 public class StringCalculator_Tests
 {
-    [Fact]
-    public void NullString()
+    [Theory]
+    [InlineData("", 0)]
+    public void NullString(string inputString, int expectedSum)
     {
         // Act
         StringCalculator SC = new StringCalculator();
 
         // Arrange
-        int result = SC.Sum("", "");
+        int result = SC.Sum(inputString);
 
         // Assert
-        Assert.Equal(0, result);
+        Assert.Equal(expectedSum, result);
     }
 }
