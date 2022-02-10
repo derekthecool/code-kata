@@ -13,6 +13,7 @@ public class StringCalculator_Tests
     [InlineData("4", 4)]
     [InlineData("5", 5)]
     [InlineData("6", 6)]
+    [InlineData("1,2", 3)]
     public void NullString(string inputString, int expectedSum)
     {
         // Act

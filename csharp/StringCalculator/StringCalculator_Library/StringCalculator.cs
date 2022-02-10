@@ -10,6 +10,13 @@ public class StringCalculator
         }
 
         // Parse the string as a number
+        string[] array = input.Split(',');
+
+        foreach (var item in array)
+        {
+            /* int */
+        }
+
         return Convert.ToInt32(input);
     }
 }
