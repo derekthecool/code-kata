@@ -12,7 +12,7 @@ public class StringCalculator_Tests
         StringCalculator SC = new StringCalculator();
 
         // Arrange
-        int result = SC.Sum("", "");
+        int result = SC.Sum("");
 
         // Assert
         Assert.Equal(0, result);
