@@ -1,8 +1,8 @@
 ﻿namespace StringCalculator_Library;
 public class StringCalculator
 {
-    public int Sum(string input)
+    public long Sum(string input)
     {
-        return 0;
+        return Convert.ToInt64(input);
     }
 }
