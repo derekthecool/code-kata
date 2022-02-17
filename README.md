@@ -3,25 +3,26 @@
 [GitHub link](https://github.com/garora/TDD-Katas/blob/main/src/README.md#the-fizzbuzz-kata)
 for source of tests.
 
-## Sting Calculator
+## String Calculator
 
-- Create a simple String calculator with a method int Add(string numbers). The
-  method can take 0, 1 or 2 numbers, and will return their sum (for an empty
-  string it will return 0). For example "" or "1" or "1,2"
-  - Start with the simplest test case of an empty string and move to 1 and two
-    numbers
-  - Remember to solve things as simply as possible so that you force yourself to
-    write tests you did not think about
-  - Remember to refactor after each passing test
-- Allow the Add method to handle an unknown amount of numbers
-- Allow the Add method to handle new lines between numbers (instead of commas).
-  - the following input is ok: "1\n2,3" (will equal 6)
-  - the following input is NOT ok: "1,\n" (not need to prove it - just clarifying)
-- Support different delimiters. To change a delimiter, the beginning of the
-  string will contain a separate line that looks like this:
-  [delimiter]\n[numbers...], for example ;\n1;2 should return three where the
-  default delimiter is ; .
-  - the first line is optional. all existing scenarios should still be supported
-- Calling Add with a negative number will throw an exception "negatives not
-  allowed" - and the negative that was passed.
-  - if there are multiple negatives, show all of them in the exception message
+1. Create a String calculator with a method int Add(string numbers)
+  1. The method can take 0, 1, or 2 numbers and will return their sum.
+  2. An empty string will return 0.
+  3. Example inputs: `“”, “1”, or “1,2”`
+  4. Start with the simplest test case of an empty string. Then 1 number. Then 2 numbers.
+  5. Remember to solve things as simply as possible, forcing yourself to write tests for things you didn’t think about.
+  6. Remember to refactor after each passing test.
+2. Allow the Add method to handle an unknown number of arguments/numbers.
+3. Allow the Add method to handle new lines between numbers (instead of commas).
+  1. Example: `“1\n2,3”` should return 6.
+  2. Example: `“1,\n”` is invalid, but you don’t need a test for this case.
+  3. Only test correct inputs  there is no need to deal with invalid inputs for this kata.
+4. Calling Add with a negative number will throw an exception “Negatives not allowed: “ listing all negative numbers that were in the list of numbers.
+  1. Example `“-1,2”` throws “Negatives not allowed: -1”
+  2. Example `“2,-4,3,-5”` throws “Negatives not allowed: -4,-5”
+5. Numbers bigger than 1000 should be ignored.
+  * Example: `“1001,2”` returns 2
+6. Allow the Add method to handle a different delimiter:
+  1. To change the delimiter, the beginning of the string will contain a separate line that looks like this: `“//[delimiter]\n[numbers]”`
+  2. Example: `“//;\n1;2”` should return 3 (the delimiter is ;)
+  3. This first line is optional; all existing scenarios (using , or \n) should work as before.
