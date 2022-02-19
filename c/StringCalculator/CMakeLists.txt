@@ -34,8 +34,8 @@ add_executable(${ProjectBasename}_test
 target_link_libraries(${ProjectBasename}_test ${ProjectBasename})
 
 #Use the newest C standard (C11)
-set_property(TARGET ${ProjectBasename}      C_STANDARD 11)
-set_property(TARGET ${ProjectBasename}_test C_STANDARD 11)
+set_property(TARGET ${ProjectBasename}      PROPERTY C_STANDARD 11)
+set_property(TARGET ${ProjectBasename}_test PROPERTY C_STANDARD 11)
 
 # Tests can pass or fail in two ways:
 # 1. Default method is to check the return code.
