@@ -1,0 +1,10 @@
+# vim: set fenc=utf-8 ft=dosini:
+# see: https://github.com/skywind3000/asynctasks.vim/wiki/Task-Config
+
+# Cmake test runner
+[test]
+command=cd $(VIM_FILEDIR)/debug && ctest --build-and-test .. ./ --build-generator "Unix Makefiles" --test-command ctest
+cwd=<root>
+output=quickfix
+errorformat=%f:%l:%m
+save=1
