@@ -3,8 +3,13 @@
 
 # Cmake test runner
 [test]
-command=cd $(VIM_FILEDIR)/debug && ctest --build-and-test .. ./ --build-generator "Unix Makefiles" --test-command ctest
+#command=cd $(VIM_FILEDIR)/debug && ctest --build-and-test .. ./ --build-generator "Unix Makefiles" --test-command ctest
+command=cd $(VIM_FILEDIR) && ag -l | entr ctest --build-and-test ./ ./debug/ --build-generator "Unix Makefiles" --test-command ctest | awk '/tests passed,/{print "TDD fail: " $4 "/" $9}' > ~/tdd.txt
 cwd=<root>
-output=quickfix
-errorformat=%f:%l:%m
-save=1
+output=terminal
+pos=floaterm_reuse
+focus=1
+#cwd=<root>
+#output=quickfix
+#errorformat=%f:%l:%m
+#save=1

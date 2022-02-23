@@ -55,7 +55,7 @@ set_property(TARGET ${ProjectBasename}_test PROPERTY C_STANDARD 11)
 #  ___) | | | | (_) | |_| | | (_| | |  __/ (_| \__ \__ \
 # |____/|_| |_|\___/ \__,_|_|\__,_| |_|   \__,_|___/___/
 #--------------------------------
-add_test(EmptyString_ShouldPass ${ProjectBasename}_test "")
+add_test(EmptyString_ShouldPass ${ProjectBasename}_test "" 0)
 
 # Tests that are supposed to fail (return value != 0)
 #  ____  _                 _     _   _____     _ _ 
