@@ -1,5 +1,41 @@
 #!/usr/bin/env bash
 
 test_fizz_buzz() {
-	assert_equals 0 $(./FizzBuzz.sh 0)
+	assert_equals 1 $(./FizzBuzz.sh 1)
+}
+
+test_threes() {
+	assert_equals "fizz" $(./FizzBuzz.sh 3)
+	assert_equals "fizz" $(./FizzBuzz.sh 6)
+	assert_equals "fizz" $(./FizzBuzz.sh 9)
+	assert_equals "fizz" $(./FizzBuzz.sh 12)
+	# assert_equals "fizz" $(./FizzBuzz.sh 15)
+	assert_equals "fizz" $(./FizzBuzz.sh 18)
+	assert_equals "fizz" $(./FizzBuzz.sh 21)
+	assert_equals "fizz" $(./FizzBuzz.sh 24)
+	assert_equals "fizz" $(./FizzBuzz.sh 27)
+	# assert_equals "fizz" $(./FizzBuzz.sh 30)
+	assert_equals "fizz" $(./FizzBuzz.sh 33)
+	assert_equals "fizz" $(./FizzBuzz.sh 36)
+	assert_equals "fizz" $(./FizzBuzz.sh 39)
+	assert_equals "fizz" $(./FizzBuzz.sh 42)
+	# assert_equals "fizz" $(./FizzBuzz.sh 45)
+	assert_equals "fizz" $(./FizzBuzz.sh 48)
+	assert_equals "fizz" $(./FizzBuzz.sh 51)
+	assert_equals "fizz" $(./FizzBuzz.sh 54)
+	assert_equals "fizz" $(./FizzBuzz.sh 57)
+	# assert_equals "fizz" $(./FizzBuzz.sh 60)
+	assert_equals "fizz" $(./FizzBuzz.sh 63)
+	assert_equals "fizz" $(./FizzBuzz.sh 66)
+	assert_equals "fizz" $(./FizzBuzz.sh 69)
+	assert_equals "fizz" $(./FizzBuzz.sh 72)
+	# assert_equals "fizz" $(./FizzBuzz.sh 75)
+	assert_equals "fizz" $(./FizzBuzz.sh 78)
+	assert_equals "fizz" $(./FizzBuzz.sh 81)
+	assert_equals "fizz" $(./FizzBuzz.sh 84)
+	assert_equals "fizz" $(./FizzBuzz.sh 87)
+	# assert_equals "fizz" $(./FizzBuzz.sh 90)
+	assert_equals "fizz" $(./FizzBuzz.sh 93)
+	assert_equals "fizz" $(./FizzBuzz.sh 96)
+	assert_equals "fizz" $(./FizzBuzz.sh 99)
 }
