@@ -74,7 +74,11 @@ Install-Module -Name Pester -Force
 
 ### Lua
 
-## TDD Katas
+#### Testing Interface
 
-[GitHub link](https://github.com/garora/TDD-Katas/blob/main/src/README.md#the-fizzbuzz-kata)
-for source of tests.
+[u test](https://github.com/IUdalov/u-test): a very simple lua testing framework
+that can be installed easily with luarocks
+
+```sh
+luarocks install u-test
+```
