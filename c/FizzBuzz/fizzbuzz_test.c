@@ -3,8 +3,8 @@
 #include <string.h>
 
 int main(int argc, char *argv[]) {
-  char FB_output[20] = {'\0'};
-  memset(FB_output,0,20);
-  FB(atoi(argv[1]), FB_output);
-  return strcmp(FB_output, argv[2]);
+  char FizzBuzz_output[20] = {'\0'};
+  memset(FizzBuzz_output, 0, 20);
+  FizzBuzz(atoi(argv[1]), FizzBuzz_output);
+  return strcmp(FizzBuzz_output, argv[2]);
 }
