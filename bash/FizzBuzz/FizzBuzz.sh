@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-fb() {
+FizzBuzz() {
 	echo 5
 }
 
-fb "$1"
+FizzBuzz "$1"
