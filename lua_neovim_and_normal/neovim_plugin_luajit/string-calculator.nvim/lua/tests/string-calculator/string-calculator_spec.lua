@@ -25,4 +25,28 @@ describe("String calculator tests", function()
     local type_of_package = type(package)
     assert.are.same(type_of_package, "function")
   end)
+
+  it("Empty string", function()
+    local calculator = require("string-calculator").calculator
+    local output = calculator("")
+    assert.are.equals(0, output)
+  end)
+
+  it("Single number", function()
+    local calculator = require("string-calculator").calculator
+    for number = 0, 1000 do
+      local output = calculator(tostring(number))
+      assert.are.equals(number, output)
+    end
+  end)
+
+  it("Two numbers", function()
+    local calculator = require("string-calculator").calculator
+    for _ = 1, 100 do
+      local number1 = math.random(0, 1000)
+      local number2 = math.random(0, 1000)
+      local output = calculator(string.format("%d,%d", number1, number2))
+      assert.are.equals(number1 + number2, output)
+    end
+  end)
 end)
