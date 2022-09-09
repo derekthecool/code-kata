@@ -1,8 +1,8 @@
 ﻿namespace StringCalculator_Library;
-public class StringCalculator
+public static class StringCalculator
 {
-    public int? Sum(string input)
+    public static int? Sum(string input)
     {
-        return null;
+        return 0;
     }
 }
