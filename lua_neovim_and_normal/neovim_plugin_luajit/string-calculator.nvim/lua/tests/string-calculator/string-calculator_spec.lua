@@ -1,4 +1,4 @@
-describe("String calculator tests", function()
+describe("String calculator tests --", function()
   before_each(function()
     --[[
     Run time path is not getting loaded automatically, so modify it before each test
