@@ -1,5 +1,6 @@
-local calculator = require('string-calculator.string-calculator-function').string_calculator
+local calculator = require('string-calculator.string-calculator-function')
 
 return {
-  calculator = calculator
+  calculator = calculator.string_calculator,
+  calculate_buffer = calculator.calculate_buffer
 }
