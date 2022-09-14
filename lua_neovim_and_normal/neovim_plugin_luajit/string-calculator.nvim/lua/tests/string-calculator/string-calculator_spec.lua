@@ -1,21 +1,8 @@
 describe("String calculator tests --", function()
   before_each(function()
-    --[[
-    Run time path is not getting loaded automatically, so modify it before each test
-
-    Project directory tree view:
-    lua/
-    ├── string-calculator
-    │   ├── init.lua
-    │   └── string-calculator-function.lua
-    └── tests
-        └── string-calculator
-            └── string-calculator_spec.lua
-
-    Our test files are the '_spec.lua' files. So adding the directory 4 levels up will set our runtimepath properly.
-    ]]
-
-    local path_to_plugin = debug.getinfo(1).source:match("@(.*)/.*/.*/.*/.*"):gsub('"', "")
+    -- Run time path is not getting loaded automatically, so modify it before each test
+    -- This will find the first directory named 'lua' and add the directory one level above to vim run time path
+    local path_to_plugin = debug.getinfo(1).source:match("@(.*)[/\\]lua[/\\]"):gsub('"', "")
     vim.cmd([[set runtimepath+=]] .. path_to_plugin)
     print(string.format("Adding: %s to neovim runtimepath because plenary tests fail without this", path_to_plugin))
   end)
