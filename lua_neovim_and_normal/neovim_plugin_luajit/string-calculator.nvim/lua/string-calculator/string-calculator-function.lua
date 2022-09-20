@@ -1,4 +1,4 @@
-local M = {}
+vim.fn.getbufinfo()local M = {}
 
 M.string_calculator = function(input)
   print('You sent ' .. input)
