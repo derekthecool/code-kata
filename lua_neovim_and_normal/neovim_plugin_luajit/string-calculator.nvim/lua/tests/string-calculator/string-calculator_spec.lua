@@ -12,4 +12,8 @@ describe("String calculator tests --", function()
     local type_of_package = type(package)
     assert.are.same(type_of_package, "function")
   end)
+
+  it('fail yo', function()
+      assert.are.same(1, 2)
+  end)
 end)
